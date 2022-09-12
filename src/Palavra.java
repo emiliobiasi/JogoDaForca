@@ -37,9 +37,6 @@ public class Palavra implements Comparable<Palavra>
         // e assim por diante.
         // lançar excecao caso nao encontre em this.texto
         // a Iézima aparição da letra fornecida.
-        for () {
-
-        }
     }
 
     public int getTamanho ()
