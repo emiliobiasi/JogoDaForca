@@ -62,6 +62,13 @@ public class Tracinhos implements Cloneable
     public int hashCode ()
     {
         // calcular e retornar o hashcode de this
+        int ret = 7;
+        ret = 13 * ret + new String (this.texto).hashCode();
+
+        if (ret < 0) {
+            ret=-ret;
+        }
+        return ret;
     }
 
     public Tracinhos (Tracinhos t) throws Exception // construtor de cópia

@@ -48,6 +48,13 @@ public class ControladorDeErros implements Cloneable
     public int hashCode ()
     {
         // calcular e retornar o hashcode de this
+        int ret = 7;
+        ret = 13 * ret + new Integer(this.qtdErr).hashCode();
+        ret = 13 * ret + new Integer(this.qtdMax).hashCode();
+        if (ret < 0) {
+            ret=-ret;
+        }
+        return ret;
     }
 
     public ControladorDeErros (ControladorDeErros c) throws Exception // construtor de cópia
