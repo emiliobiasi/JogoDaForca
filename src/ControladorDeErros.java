@@ -49,8 +49,10 @@ public class ControladorDeErros implements Cloneable
         if (obj == null) return false;
         if (this.getClass() != obj.getClass()) return false;
 
-        if (this.qtdErr != ((ControladorDeErros)obj).qtdErr) return false;
-        if (this.qtdMax != ((ControladorDeErros)obj).qtdMax) return false;
+        ControladorDeErros cde = (ControladorDeErros)obj;
+
+        if (this.qtdErr != cde.qtdErr) return false;
+        if (this.qtdMax != cde.qtdMax) return false;
 
         return true;
     }

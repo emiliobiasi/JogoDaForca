@@ -64,7 +64,9 @@ public class Tracinhos implements Cloneable
         if (this == null) return false;
         if (this.getClass() != obj.getClass()) return false;
 
-        if (this.texto != ((Tracinhos)obj).texto) return false;
+        Tracinhos tr = (Tracinhos) obj;
+
+        if (this.texto != tr.texto) return false;
 
         return true;
     }

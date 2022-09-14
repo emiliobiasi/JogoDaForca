@@ -46,7 +46,9 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         if (obj == null) return false;
         if (this.getClass() != obj.getClass()) return false;
 
-        if (this.letrasJaDigitadas != ((ControladorDeLetrasJaDigitadas) obj).letrasJaDigitadas) return false;
+        ControladorDeLetrasJaDigitadas cdljd = (ControladorDeLetrasJaDigitadas) obj;
+
+        if (this.letrasJaDigitadas != cdljd.letrasJaDigitadas) return false;
 
         return true;
     }
