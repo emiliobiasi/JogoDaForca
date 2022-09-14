@@ -31,17 +31,27 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         this.letrasJaDigitadas += letra;
     }
 
+    @Override
     public String toString ()
     {
         // retorna um String com TODAS as letras presentes em
         // this.letrasJaDigitadas separadas por vírgula (,).
     }
 
+    @Override
     public boolean equals (Object obj)
     {
         // verificar se this e obj são iguais
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (this.getClass() != obj.getClass()) return false;
+
+        if (this.letrasJaDigitadas != ((ControladorDeLetrasJaDigitadas) obj).letrasJaDigitadas) return false;
+
+        return true;
     }
 
+    @Override
     public int hashCode ()
     {
         // calcular e retornar o hashcode de this
