@@ -93,10 +93,20 @@ public class Tracinhos implements Cloneable
     {
         // intanciar this.texto um vetor com o mesmo tamanho de t.texto
         // e copilar o conteúdo de t.texto para this.texto
+        if (t == null) {
+            throw new Exception ("t não existe (tracinho)");
+        }
+        this.texto = t.texto;
     }
 
     public Object clone ()
     {
         // retornar uma copia de this
+        Tracinhos ret = null;
+        try {
+            ret = new Tracinhos(this);
+        } catch (Exception erro) {}
+        return ret;
     }
+
 }

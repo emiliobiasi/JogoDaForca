@@ -73,10 +73,21 @@ public class ControladorDeErros implements Cloneable
     public ControladorDeErros (ControladorDeErros c) throws Exception // construtor de cópia
     {
         // copiar c.qtdMax e c.qtdErr, respectivamente em, this.qtdMax e this.qtdErr
+        if (c == null) {
+            throw new Exception("variavel c nao existente - null");
+        }
+        this.qtdMax = c.qtdMax;
+        this.qtdErr = c.qtdErr;
     }
 
     public Object clone ()
     {
         // returnar uma cópia de this
+        ControladorDeErros ret = null;
+        try {
+            ret = new ControladorDeErros(this);
+        } catch (Exception erro) {}
+        return ret;
     }
+
 }
