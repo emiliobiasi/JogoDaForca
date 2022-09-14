@@ -36,6 +36,11 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     {
         // retorna um String com TODAS as letras presentes em
         // this.letrasJaDigitadas separadas por vírgula (,).
+        String retLetrasJaDigitadas = null;
+        for (int i = 0; i < this.letrasJaDigitadas.length(); i++) {
+            retLetrasJaDigitadas = letrasJaDigitadas.charAt(i) + ", ";
+        }
+        return retLetrasJaDigitadas;
     }
 
     @Override
@@ -58,7 +63,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     {
         // calcular e retornar o hashcode de this
         int ret = 7;
-        ret = 13 * ret + new String(this.letrasJaDigitadas).hashCode();
+        ret = 7 * ret + new String(this.letrasJaDigitadas).hashCode();
         if (ret < 0) {
             ret=-ret;
         }

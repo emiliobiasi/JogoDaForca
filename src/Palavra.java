@@ -71,7 +71,7 @@ public class Palavra implements Comparable<Palavra>
     {
         // calcular e retornar o hashcode de this
         int ret = 7;
-        ret = 13 * ret + new String (this.texto).hashCode();
+        ret = 7 * ret + new String (this.texto).hashCode();
         if (ret < 0) {
             ret=-ret;
         }

@@ -52,6 +52,11 @@ public class Tracinhos implements Cloneable
         // retorna um String com TODOS os caracteres que há
         // no vetor this.texto, intercalados com espaços em
         // branco
+        String retTracinhos = null;
+        for (int i = 0; i < this.texto.length; i++) {
+            retTracinhos = this.texto[i] + " ";
+        }
+        return retTracinhos;
     }
 
     @Override
@@ -76,7 +81,7 @@ public class Tracinhos implements Cloneable
     {
         // calcular e retornar o hashcode de this
         int ret = 7;
-        ret = 13 * ret + new String (this.texto).hashCode();
+        ret = 7 * ret + new String (this.texto).hashCode();
 
         if (ret < 0) {
             ret=-ret;
