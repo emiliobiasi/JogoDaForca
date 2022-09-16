@@ -37,6 +37,11 @@ public class Palavra implements Comparable<Palavra>
         // e assim por diante.
         // lançar excecao caso nao encontre em this.texto
         // a Iézima aparição da letra fornecida.
+        if (this.texto.charAt(i) == letra) {
+            return i;
+        } else {
+            throw new Exception("Letra não encontrada em nenhuma das posições!");
+        }
     }
 
     public int getTamanho ()
