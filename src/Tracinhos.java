@@ -52,9 +52,9 @@ public class Tracinhos implements Cloneable
         // retorna um String com TODOS os caracteres que há
         // no vetor this.texto, intercalados com espaços em
         // branco
-        String retTracinhos = null;
+        String retTracinhos = "";
         for (int i = 0; i < this.texto.length; i++) {
-            retTracinhos = this.texto[i] + " ";
+            retTracinhos = retTracinhos + this.texto[i] + " ";
         }
         return retTracinhos;
     }
