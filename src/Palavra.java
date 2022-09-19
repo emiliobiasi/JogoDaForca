@@ -37,13 +37,21 @@ public class Palavra implements Comparable<Palavra>
         // e assim por diante.
         // lançar excecao caso nao encontre em this.texto
         // a Iézima aparição da letra fornecida.
-        if (i == 0) {
-            return this.texto.indexOf(letra);
-        } else if (i == 1) {
-            return this.texto.indexOf(letra);
-        }
-            throw new Exception("A letra informada não foi encontrada no vetor");
+        try {
+            int qtd = this.getQuantidade(letra) - i;
 
+            for(int j = 0; j < this.texto.length(); j++) {
+                if (letra == this.texto.charAt(j)) {
+                    qtd--;
+                    if (qtd == 0) {
+                        return j;
+                    }
+                }
+            }
+        } catch (Exception erro) {
+            throw erro;
+        }
+        return -1;
     }
 
     public int getTamanho ()
