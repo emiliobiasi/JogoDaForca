@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package entities;
 
 public class Tracinhos implements Cloneable
 {
@@ -7,7 +7,7 @@ public class Tracinhos implements Cloneable
     public Tracinhos (int qtd) throws Exception
     {
         // verifica se qtd não é positiva, lançando uma exceção.
-        if (qtd < 0) {
+        if (qtd <= 0) {
             throw new Exception("Quantidade Inválida!");
         }
         // instancia this.texto com um vetor com tamanho igual qtd.
@@ -66,10 +66,10 @@ public class Tracinhos implements Cloneable
         // true no caso afirmativo ou false no caso negativo
 
         if (this == obj) return true;
-        if (this == null) return false;
+        if (obj == null) return false;
         if (this.getClass() != obj.getClass()) return false;
 
-        Tracinhos tr = (Tracinhos) obj;
+        Tracinhos tr = (Tracinhos)obj;
 
         if (this.texto != tr.texto) return false;
 

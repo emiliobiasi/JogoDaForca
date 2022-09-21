@@ -1,4 +1,4 @@
-//import java.io.BufferedReader;
+package entities;//import java.io.BufferedReader;
 //import java.io.InputStreamReader;
 //import java.io.IOException;
 

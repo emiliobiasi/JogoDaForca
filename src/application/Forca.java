@@ -1,3 +1,7 @@
+package application;
+
+import entities.*;
+
 import java.io.*;
 
 public class Forca
@@ -14,19 +18,19 @@ public class Forca
             Tracinhos tracinhos = null;
             try
             {
-                tracinhos = new Tracinhos (palavra.getTamanho());
+                tracinhos = new Tracinhos(palavra.getTamanho());
             }
             catch (Exception erro)
             {}
 
             ControladorDeLetrasJaDigitadas
                     controladorDeLetrasJaDigitadas =
-                    new ControladorDeLetrasJaDigitadas ();
+                    new ControladorDeLetrasJaDigitadas();
 
             ControladorDeErros controladorDeErros = null;
             try
             {
-                controladorDeErros = new ControladorDeErros ((int)(palavra.getTamanho()*0.6));
+                controladorDeErros = new ControladorDeErros((int)(palavra.getTamanho()*0.6));
             }
             catch (Exception erro)
             {}
@@ -34,7 +38,7 @@ public class Forca
             while (tracinhos.isAindaComTracinhos() &&
                     !controladorDeErros.isAtingidoMaximoDeErros())
             {
-                System.out.println ("Palavra...: "+tracinhos);
+                System.out.println ("entities.Palavra...: "+tracinhos);
                 System.out.println(palavra);
                 System.out.println ("Digitadas.: "+controladorDeLetrasJaDigitadas);
                 System.out.println ("Erros.....: "+controladorDeErros);
