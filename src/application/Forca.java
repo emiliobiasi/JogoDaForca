@@ -39,7 +39,6 @@ public class Forca
                     !controladorDeErros.isAtingidoMaximoDeErros())
             {
                 System.out.println ("entities.Palavra...: "+tracinhos);
-                System.out.println(palavra);
                 System.out.println ("Digitadas.: "+controladorDeLetrasJaDigitadas);
                 System.out.println ("Erros.....: "+controladorDeErros);
 

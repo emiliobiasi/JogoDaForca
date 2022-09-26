@@ -11,7 +11,7 @@ public class TestTracinhos {
             Tracinhos t1 = new Tracinhos(null);
             System.out.println("Deu certo contruir tracinhos null.");
         } catch (Exception erro) {
-            System.out.println("Deu erro contruir tracinhos nulo!");
+            System.err.println("Deu erro contruir tracinhos nulo!");
         }
 
         //teste 2
@@ -20,7 +20,7 @@ public class TestTracinhos {
             Tracinhos t2 = new Tracinhos(qtd);
             System.out.println("Deu certo construir tracinhos com quantidade negativa");
         } catch (Exception erro) {
-            System.out.println("O tamanho da Palavra que monta os tracinhos é negativa, tracinhos não criado!");
+            System.err.println("O tamanho da Palavra que monta os tracinhos é negativa, tracinhos não criado!");
         }
 
         //teste 3
@@ -29,7 +29,7 @@ public class TestTracinhos {
             Tracinhos t3 = new Tracinhos(qtd);
             System.out.println("Foi possível cria tracinhos vazio: \"\"");
         } catch (Exception erro) {
-            System.out.println("Não foi possível criar tracinhos vazio: \"\"");
+            System.err.println("Não foi possível criar tracinhos vazio: \"\"");
         }
 
         //teste 4
@@ -39,7 +39,7 @@ public class TestTracinhos {
             t4 = new Tracinhos(p1.getTamanho());
             System.out.println("Deu certo construir tracinhos com a palavra JAVA: " + t4);
         } catch (Exception erro) {
-            System.out.println("Não foi possível construir tracinhos com a palavra JAVA");
+            System.err.println("Não foi possível construir tracinhos com a palavra JAVA");
         }
 
         //teste 5
@@ -54,7 +54,7 @@ public class TestTracinhos {
             t7 = new Tracinhos(p2.getTamanho());
             System.out.println("Deu certo construir tracinhos com a palavra MONGODB: " + t5);
         } catch (Exception erro) {
-            System.out.println("Não foi possível construir tracinhos com a palavra MONGODB");
+            System.err.println("Não foi possível construir tracinhos com a palavra MONGODB");
         }
 
         //teste 6 - método revele
@@ -68,7 +68,7 @@ public class TestTracinhos {
             }
             System.out.println("Deu certo revelar as letras \"A\" da palavra JAVA: " + t4);
         } catch (Exception erro) {
-            System.out.println("Não foi possível revelar a letra \"A\" da palavra JAVA");
+            System.err.println("Não foi possível revelar a letra \"A\" da palavra JAVA");
         }
 
         //teste 7 - método revele
@@ -82,7 +82,7 @@ public class TestTracinhos {
             }
             System.out.println("Deu certo revelar as letras \"O\" da palavra MONGODB: " + t5);
         } catch (Exception erro) {
-            System.out.println("Não foi possível revelar a letra \"O\" da palavra MONGODB");
+            System.err.println("Não foi possível revelar a letra \"O\" da palavra MONGODB");
         }
 
         //teste 8 - método isAindaComTracinhos
@@ -91,7 +91,7 @@ public class TestTracinhos {
                 System.out.println("Deu certo a validação se ainda possuem tracinhos para revelar na palavra JAVA: " + t4);
             }
         } catch (Exception erro) {
-            System.out.println("A validação deu erro, não encontrou nenhum tracinho na palavra JAVA: " + t4);
+            System.err.println("A validação deu erro, não encontrou nenhum tracinho na palavra JAVA: " + t4);
         }
 
         //teste 9 - método isAindaComTracinhos
@@ -100,7 +100,7 @@ public class TestTracinhos {
                 System.out.println("Deu certo a validação se ainda possuem tracinhos para revelar na palavra MONGODB: " + t5);
             }
         } catch (Exception erro) {
-            System.out.println("A validação deu erro, não encontrou nenhum tracinho na palavra MONGODB: " + t5);
+            System.err.println("A validação deu erro, não encontrou nenhum tracinho na palavra MONGODB: " + t5);
         }
 
         //teste 10 - toString
