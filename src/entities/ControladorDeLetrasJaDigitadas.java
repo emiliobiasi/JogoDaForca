@@ -28,9 +28,12 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         // verifica se a letra fornecida ja foi digitada (pode usar
         // o método this.isJaDigitada, para isso), lancando uma exceção
         // em caso afirmativo.
-
-        // concatena a letra fornecida a this.letrasJaDigitadas.
-        this.letrasJaDigitadas += letra;
+        if (isJaDigitada(letra)) {
+            throw new Exception("Letra ja digitada antes!");
+        } else {
+            // concatena a letra fornecida a this.letrasJaDigitadas.
+            this.letrasJaDigitadas += letra;
+        }
     }
 
     @Override
