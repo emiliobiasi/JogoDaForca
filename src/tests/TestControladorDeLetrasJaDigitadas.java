@@ -147,10 +147,10 @@ public class TestControladorDeLetrasJaDigitadas {
         System.out.println ("Eh " + cdljd1.equals(null) + " que o controlador de letras ja digitadas \"cdljd1\" eh igual (pelo equals) a null");
 
         //teste 14
-        System.out.println ("Eh " + cdljd1.equals("") + " que o controlador de letras ja digitadas \"cdljd1\" eh igual (pelo equals) a si mesmo");
+        System.out.println ("Eh " + cdljd1.equals(cdljd1) + " que o controlador de letras ja digitadas \"cdljd1\" eh igual (pelo equals) a si mesmo");
 
         //teste 15 ****
-        System.out.println ("Eh "+cdljd1.equals(cdljd2)+" que o controlador de letras ja digitadas \"cdljd1\" eh igual (pelo equals) a \"cdljd2\"");
+        System.out.println ("Eh " + cdljd1.equals(cdljd2) + " que o controlador de letras ja digitadas \"cdljd1\" eh igual (pelo equals) a \"cdljd2\"");
 
         //teste 16
         System.out.println ("Eh "+cdljd1.equals(cdljd3)+" que o controlador de letras ja digitadas \"cdljd1\" eh igual (pelo equals) a \"cdljd3\"");
