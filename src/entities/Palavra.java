@@ -39,8 +39,16 @@ public class Palavra implements Comparable<Palavra>
         // e assim por diante.
         // lançar excecao caso nao encontre em this.texto
         // a Iézima aparição da letra fornecida.
+
         try {
             int qtd = this.getQuantidade(letra) - i;
+
+            if(i < 0 || !Character.isAlphabetic((letra))) {
+                throw new Exception();
+            }
+            if(qtd <= 0 ){
+                throw new Exception();
+            }
 
             for(int j = 0; j < this.texto.length(); j++) {
                 if (letra == this.texto.charAt(j)) {

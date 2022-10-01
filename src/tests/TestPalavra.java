@@ -124,11 +124,11 @@ public class TestPalavra {
         {
             System.out.println ("A 4a letra 'E' de \"PARALELEPIPEDO\" fica na posicao " +
                     p3.getPosicaoDaIezimaOcorrencia(3,'E'));
-            System.err.println ("Achamos a 4a aparicao da letra 'E' em \"PARALELEPIPEDO\" E NAO ERA PARA ACHARMOS");
+            System.out.println ("Achamos a 4a aparicao da letra 'E' em \"PARALELEPIPEDO\" E NAO ERA PARA ACHARMOS");
         }
         catch (Exception erro)
         {
-            System.out.println ("Deu erro ao achar a 4a aparicao da letra 'E' em \"PARALELEPIPEDO\" E ERA PARA DAR ERRO MESMO");
+            System.err.println ("Deu erro ao achar a 4a aparicao da letra 'E' em \"PARALELEPIPEDO\" E ERA PARA DAR ERRO MESMO");
         }
         // teste 14
         System.out.println ("\"PARALELEPIPEDO\" tem "+p3.getTamanho()+" letras");
