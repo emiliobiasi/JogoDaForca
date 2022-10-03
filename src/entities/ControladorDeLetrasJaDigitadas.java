@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.Objects;
+
 public class ControladorDeLetrasJaDigitadas implements Cloneable
 {
     private String letrasJaDigitadas;
@@ -52,13 +54,14 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     public boolean equals (Object obj)
     {
         // verificar se this e obj são iguais
-        if (this == obj) return true;
+         if (this ==obj) return true;
         if (obj == null) return false;
         if (this.getClass() != obj.getClass()) return false;
 
         ControladorDeLetrasJaDigitadas cdljd = (ControladorDeLetrasJaDigitadas) obj;
 
-        if (this.letrasJaDigitadas != cdljd.letrasJaDigitadas) return false;
+
+        if (!Objects.equals(this.letrasJaDigitadas, cdljd.letrasJaDigitadas)) return false;
 
         return true;
     }

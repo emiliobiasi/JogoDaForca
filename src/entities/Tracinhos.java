@@ -71,7 +71,11 @@ public class Tracinhos implements Cloneable
 
         Tracinhos tr = (Tracinhos)obj;
 
-        if (this.texto != tr.texto) return false;
+
+        for (int i = 0; i < this.texto.length; i++) {
+            if (this.texto[i] != tr.texto[i]) return false;
+        }
+
 
         return true;
     }
